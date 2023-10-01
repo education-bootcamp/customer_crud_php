@@ -1,4 +1,5 @@
 <?php
+    include 'header.php';
     include 'mysql_connect.php';
 
     if (isset($_POST['submit'])){
