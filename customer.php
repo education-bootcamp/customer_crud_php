@@ -7,6 +7,8 @@
         $address=$_POST['address'];
         $salary=$_POST['salary'];
 
+        echo $nic . "OK";
+        // prepared statement
         $sql="INSERT INTO `customer` (nic,name,address,salary)
         VALUES('$nic','$name','$address','$salary')";
 
@@ -33,7 +35,7 @@
     <title>Customers</title>
 </head>
 <body>
-    <form method="post">
+    <form method="post" action="customer.php">
         <div class="container">
             <br>
             <h4>Customer Form</h4>
@@ -65,7 +67,7 @@
                 </div>
                 <div class="col-12">
                     <br>
-                    <button type="submit" class="btn btn-primary col-12">Save Customer</button>
+                    <input type="submit" name="submit" class="btn btn-primary col-12" value="Save Customer"/>
                 </div>
             </div>
         </div>
