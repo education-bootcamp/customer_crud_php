@@ -13,11 +13,12 @@ $selectedAddress = $raw['address'];
 $selectedSalary = $raw['salary'];
 
 if (isset($_POST['submit'])) {
+
     $nic = $_POST['nic'];
     $name = $_POST['name'];
     $address = $_POST['address'];
     $salary = $_POST['salary'];
-
+    echo $nic;
     $sql = "UPDATE customer SET name='$name', address='$address', salary=$salary WHERE nic='$nic'";
 
     $result = mysqli_query($con, $sql);
@@ -54,29 +55,29 @@ if (isset($_POST['submit'])) {
             <div class="col-3">
                 <div class="form-group">
                     <label for="nic">Nic</label>
-                    <input disabled type="text" name="nic" id="nic" class="form-control" required
-                    value=<?php echo $selectedNic?>>
+                    <input type="text" name="nic" id="nic" class="form-control" required
+                    value=<?php echo $selectedNic;?>>
                 </div>
             </div>
             <div class="col-3">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" class="form-control" required
-                           value=<?php echo $selectedName?>>
+                           value=<?php echo $selectedName;?>>
                 </div>
             </div>
             <div class="col-3">
                 <div class="form-group">
                     <label for="address">Address</label>
                     <input type="text" name="address" id="address" class="form-control" required
-                           value=<?php echo $selectedAddress?>>
+                           value=<?php echo $selectedAddress;?>>
                 </div>
             </div>
             <div class="col-3">
                 <div class="form-group">
                     <label for="salary">Salary</label>
                     <input type="number" name="salary" id="salary" class="form-control" required
-                           value=<?php echo $selectedSalary?>>
+                           value=<?php echo $selectedSalary;?>>
                 </div>
             </div>
             <div class="col-12">

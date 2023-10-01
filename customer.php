@@ -45,7 +45,7 @@
                 <div class="col-3">
                     <div class="form-group">
                         <label for="nic">NIC</label>
-                        <input type="text" name="nic" id="nic" class="form-control" required>
+                        <input type="text" name="nic" id="nic" class="form-control" required readonly>
                     </div>
                 </div>
                 <div class="col-3">
