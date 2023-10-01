@@ -1,5 +1,22 @@
 <?php
     include 'mysql_connect.php';
+
+    if (isset($_POST['submit'])){
+        $nic=$_POST['nic'];
+        $name=$_POST['name'];
+        $address=$_POST['address'];
+        $salary=$_POST['salary'];
+
+        $sql="INSERT INTO `customer` (nic,name,address,salary)
+        VALUES('$nic','$name','$address','$salary')";
+
+        $result=mysqli_query($con,$sql);
+        if ($result){
+            echo "Customer was Saved!";
+        }
+
+    }
+
 ?>
 
 
@@ -16,7 +33,7 @@
     <title>Customers</title>
 </head>
 <body>
-    <form>
+    <form method="post">
         <div class="container">
             <br>
             <h4>Customer Form</h4>
