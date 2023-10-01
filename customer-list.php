@@ -27,6 +27,7 @@ include 'mysql_connect.php';
             <th>Name</th>
             <th>Address</th>
             <th>Salary</th>
+            <th>Options</th>
         </tr>
         </thead>
         <tbody>
@@ -47,6 +48,10 @@ include 'mysql_connect.php';
                     <td>'.$name.'</td>
                     <td>'.$address.'</td>
                     <td>'.$salary.'</td>
+                    <td>
+                    <a href="#" class="btn btn-success btn-sm">Update</a>
+                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
                 </tr>
                 ';
 
